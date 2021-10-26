@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         client = LocationServices.getFusedLocationProviderClient(this);
 
         //Check Permission
-        if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+        if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_FINE_LOCATION)! = PackageManager.PERMISSION_GRANTED) {
             //WHEN PERMISSION GRANTED CALL METHOD
             getCurrentLocation();
         } else {
@@ -94,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
             if(grantResults.length>0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
                 //When Permission granted  call method
                 getCurrentLocation();
+                //It will give the current location
             }
         }
     }
